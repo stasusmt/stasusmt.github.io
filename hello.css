@@ -1,0 +1,105 @@
+/*
+CSS (Cascading Style Sheets) is the code that styles web content.
+CSS is a style sheet language
+CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:
+
+*/
+/* p {
+    color: blueviolet;
+} */
+/* The whole structure is called a ruleset. 
+Selector: is the HTML 
+element name at the start of the ruleset
+It defines the elements(s) to be styled(ex <p> elements.)
+To style a different element, change the selector
+Declaration
+This is a single rulee like color: red; It specifies which of the
+element's properties you want to style
+properties
+These are ways in which you can style an HTML element. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule.
+Property value
+To the right of the property—after the colon—there is the property value. 
+This is chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)
+Apart from the selector, each ruleset must be wrapped in curly braces. ({})
+Within each declaration, you must use a colon (:) to separate the property from its value or values.
+Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.
+To modify multiple property values in one ruleset, write them separated by semicolons, like this:
+*/
+
+/* Selecting multiple elements
+You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
+
+
+*/
+
+/* Different types of selectors
+ */
+ html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+ 
+}
+h1 {
+    font-size: 80px;
+    text-align: center;    
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+/* 
+CSS: all about boxes
+padding, the space around the content. In the example below, it is the space around the paragraph text.
+border, the solid line that is just outside the padding
+margin, the space around the outside of the border
+In this section we also use:
+    width (of an element)
+    background-color, the color behind an elements' content and padding
+    color, the color of an elements's content(usually text)
+    text-shadow sets a drop shadow on the text inside an element
+    display sets the display mode of an element.
+
+ */
+ /* changing the page color */
+
+ html {
+     background-color: #061104d7;
+ }
+
+ /* styling the body */
+body {
+  width: 650px;
+  margin: 0 auto;
+  background-color: #bd8e54;
+  padding: 0px 25px 25px 25px;
+  border: 5px solid blueviolet;
+}
+
+/* 
+There are several declarations for the <body> element. Let's gp though these line-by-line:read-only
+
+width: 600; this forces the body to always be 600 pixels wide
+margin 0 auto; when you set two values on a property like margin or padding, the first value affecrs the elemen's top and bottom side(setting it to 0 in this case); the second value affects the left and right side( here, auto is special value that divides the available horizontal space evenly
+between left and right). You can also use one, three, or four values as documented in Margin Syntax 
+*/
+/* Positioning and styling the main page title
+ */
+h1 {
+    margin: 0;
+    padding: 25px 0;
+    color: #311f09;
+    text-shadow: 3px 3px 15px #d1f3ee;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+/* 
+The <body> is a block element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, image are inline elemnets, for the auto margin trick to work on this image, we must give it block-level behavior using display: block;
+The instructions above assume that you're using an image smaller tan the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a graphics editor, or 2) use CSS to size the image by setting the width property on the <img> element with a smaller value.
+Note:
+Don't be too concerned if you don't completely understand display: block; or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's display reference page.
+Conclusion
+*/

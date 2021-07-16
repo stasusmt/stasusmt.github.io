@@ -1,0 +1,13 @@
+crucial
+Paragraph elements
+HTML Heading
+HTML Lists
+HTML Anchor Tages
+HTML Images
+HTML Boilerplate
+
+
+Important: Using MDN as a Resource
+
+Intro: Chrome inspector
+VSCode formating on save
