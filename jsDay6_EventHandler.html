@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Button Change Style Background</title>
+    <style>
+        div {
+            background-color: blue;
+            height: 100px;
+            width: 25%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button>Change color</button> -->
+
+    <script>
+        for (let i = 1; i <= 24; i++) {
+            const myDiv = document.createElement('div');
+            document.body.appendChild(myDiv);
+        }
+        const btn = document.querySelector('button');
+
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+        function bgChange(e) {
+            const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            return rndCol;
+            //  e.target.style.backgroundColor = rndCol;
+            // document.body.style.backgroundColor = rndCol;
+        }
+
+        const divs = document.querySelectorAll('div');
+
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].onclick = function (e) {
+                e.target.style.backgroundColor = bgChange();
+            }
+        }
+
+// btn.addEventListener('click',bgChange);
+
+    </script>
+
+</body>
+
+</html>
