@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        canvas {
+            border: 1px solid black;
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="../styles.css" />
+ <p> Using arrow key|WASD key to move the star </p>
+
+</head>
+
+<body>
+    <section class="preview"></section>
+
+    <canvas width="520" height="330" tabindex="0"></canvas>
+
+
+</body>
+
+<script>
+    let canvas = document.querySelector('canvas');
+    let ctx = canvas.getContext('2d');
+
+    /*     function drawCircle(x, y, size) {
+    
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            ctx.arc(x, y, size, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+     */
+
+
+    function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
+        var rot = Math.PI / 2 * 3;
+        var x = cx;
+        var y = cy;
+        var step = Math.PI / spikes;
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeSyle = "#000";
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - outerRadius)
+        for (i = 0; i < spikes; i++) {
+            x = cx + Math.cos(rot) * outerRadius;
+            y = cy + Math.sin(rot) * outerRadius;
+            ctx.lineTo(x, y)
+            rot += step
+
+            x = cx + Math.cos(rot) * innerRadius;
+            y = cy + Math.sin(rot) * innerRadius;
+            ctx.lineTo(x, y)
+            rot += step
+        }
+        ctx.lineTo(cx, cy - outerRadius)
+        ctx.closePath();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'yellow';
+        ctx.stroke();
+        ctx.fillStyle = 'yellow';
+        ctx.fill();
+
+    }
+
+    let x = 250 ;
+    let y = 150;
+    const size = 35;
+
+    drawStar(x, y, 5, size, 13);
+
+    document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+
+        switch (keyName) {
+            case 'ArrowUp':
+            case 'w':
+
+                y -= 60
+
+                break;
+            case 'ArrowDown':
+            case 's':
+
+                y += 60
+                break;
+            case 'ArrowRight':
+            case 'd':
+
+                x += 60;
+                break;
+            case 'ArrowLeft':
+            case 'a':
+
+                x -= 60;
+                break;
+        }
+        if( x >= 25 && y >= 30 && x <= canvas.width && y <= canvas.height)
+            drawStar(x, y, 5, size, 13);
+        else
+            drawStar(x=250, y=150, 5, size, 13);
+
+
+
+
+
+    }, false);
+
+
+
+</script>
+
+</html>
