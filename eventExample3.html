@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            margin: 20px 0 20px 20px;
+        }
+
+        .button-bar {
+            padding: 20px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+    <section>
+        <section class="preview">
+        </section>
+
+        <div class="button-bar">
+            <button data-color="red">Red</button>
+            <button data-color="yellow">Yellow</button>
+            <button data-color="green">Green</button>
+            <button data-color="purple">Purple</button>
+            <button data-color="rand">Random</button>
+
+        </div>
+
+</body>
+<script>
+    // e.target.style.backgroundColor = "yellow";
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+
+    function bgChange() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        return rndCol
+    }
+
+
+    let buttonBar = document.querySelector('.button-bar');
+    buttonBar.addEventListener('click', e => {
+
+
+        if (e.target.dataset.color === 'rand') {
+            e.target.style.background = document.body.style.background = bgChange();
+        }
+        else
+            e.target.style.background = document.body.style.background = e.target.dataset.color;
+
+    });
+
+
+    /* const contacts = new Map()
+    contacts.set('Jessie', {phone: "2293-24-2442", address: "Ha Noi"});
+     */
+</script>
+
+</html>
