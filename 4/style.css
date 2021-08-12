@@ -1,0 +1,85 @@
+
+h1 {
+    color: blue;
+    background-color: yellow;
+    border: 4mm ridge blue;
+}
+
+p, li {
+    color: rgb(255, 247, 247);
+    list-style-type: square ;
+    font-size: 1em;;
+    width: 20em;;
+    background-color: brown;
+}
+
+em {
+    background-color: blue;
+}
+
+.special {
+    color: blue;
+  }
+  
+  p {
+    color: hsl(59, 850%, 50%);
+  }
+
+li.special,
+span.special {
+    color: orange;
+    font-weight: bold;
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    text-decoration:rgb(75, 14, 14);
+}
+
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
+.outer {
+    border: 5px solid black;
+}
+
+.box {
+    padding: 15px;
+    width: calc(100% -  50%);
+
+    background-color: rebeccapurple;
+    color: white;
+}
+.box1 {
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    transform: scale(0.5) translate(-50%, -50%);
+    
+
+}
+#para {
+    transform: scale(1.05) rotate(0.8turn) translate(30%, 355px) ;
+    background-color: rgb(20, 38, 91);
+    color: cyan;
+    
+}
+
+html {
+    background-image: url(images/grumpy-cat-1small.png);
+    /* background-position: 10px 10px; */
+    /* background-repeat: repeat-y; */
+    background-attachment: fixed;
+
+
+}
