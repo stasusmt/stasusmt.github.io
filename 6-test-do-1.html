@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redmi Note 8 2021</title>
+    <!-- <style>img {
+        width: 320px;
+      }</style> -->
+</head>
+<body>
+    <h1>Redmi Note 8 2021</h1>
+    <p>Powerful processor for smooth gamingWith the impressive MediaTek Helio G85 gaming processor, the device offers superior performance. The octa-core CPU operates at up to 2.0GHz, increasing app response speed and further enhancing your game experience.
+    </p>
+    <p>Simple responsive image website device width at 800px to set condition of change different images.</p>
+<!--Resolution switching: different size -->
+<!--     <img  srcset="images/overview01-600w.jpg 600w,
+    images/overview01-800w.jpg 800w,
+    images/overview01-1200w.jpg 1200w
+    "
+    sizes="(max-width: 1000px) 600px, 1200px"
+    src="images/overview01-600w.jpg"
+    alt="Redmi Note 8 2021">
+ -->
+
+
+<!-- Resolution switching: Same size, different resolutions -->
+<!-- <img srcset="images/overview01-800w.jpg 800w,
+overview01-1200w.jpg 1200w 1.5x,
+" 
+src="images/overview01-600w.jpg"
+ alt="Redmi Note 8 2021">
+
+ hard to test because we using differrent resolution device but i'll notice it-->
+
+ <!-- art direction -->
+<picture>
+<source media="(max-width: 799px)" srcset="images/overview01-600w.jpg">
+<source media="(min-width: 800px)" srcset="images/overview01-800w.jpg">
+<img src="images/overview01-1200w.jpg" alt="Redmi note 8">
+</picture>
+
+
+
+
+
+
+
+
+<!--     <p>    <img src="images/overview01-800w.jpg" alt="Redmi Note 8">
+    </p>
+    <p>    <img src="images/overview01-1200w.jpg" alt="Redmi Note 8">
+    </p>
+    <p>    <img src="images/overview01-600w.jpg" alt="Redmi Note 8">
+    </p>
+ -->
+</body>
+</html>
