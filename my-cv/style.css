@@ -9,6 +9,9 @@ body {
   
   h1 {
     font-size: 1.5em;
+    background-color: burlywood;
+    width: 100%;
+    margin-bottom: 2em;
   }
   
   h2 {
@@ -21,4 +24,8 @@ body {
   
   p, li, dd, dt, address {
     line-height: 1.5;
+  }
+
+  li {
+    margin: 0.8em;
   }
